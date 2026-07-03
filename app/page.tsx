@@ -22,8 +22,8 @@ const trustItems = [
   {
     title: "Diamond Appraisals",
     copy: "Careful review of diamond jewelry, engagement rings, and loose stones.",
-    image: "/macro-diamond-certified-jewelry-appraisal.png",
-    alt: "Macro diamond for certified diamond appraisal",
+    image: "/images/diamond-appraisals.png",
+    alt: "Emerald cut diamond on a black background for diamond appraisals",
   },
   {
     title: "Watch Appraisals",
@@ -82,8 +82,8 @@ const featuredServices = [
   {
     title: "Diamond Appraisals",
     href: "/diamond-appraisals",
-    image: "/macro-diamond-certified-jewelry-appraisal.png",
-    alt: "Macro diamond closeup for certified diamond appraisal",
+    image: "/images/diamond-appraisals.png",
+    alt: "Emerald cut diamond on a black background for diamond appraisals",
   },
   {
     title: "Estate Jewelry Appraisals",
