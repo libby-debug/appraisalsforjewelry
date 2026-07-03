@@ -10,8 +10,8 @@ const trustItems = [
   {
     title: "Estate Jewelry",
     copy: "Discreet valuations for inherited jewelry, estates, executors, and beneficiaries.",
-    image: "/tanzanite-estate-gemstone-appraisal.png",
-    alt: "Tanzanite gemstone for estate jewelry appraisal",
+    image: "/images/estate-jewelry.png",
+    alt: "Estate jewelry gold omega necklace with diamond drop earrings",
   },
   {
     title: "Antique Jewelry",
