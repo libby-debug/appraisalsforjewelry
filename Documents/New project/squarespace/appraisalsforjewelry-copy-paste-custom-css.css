@@ -1,0 +1,526 @@
+/* Appraisals for Jewelry - Squarespace copy/paste Custom CSS */
+
+:root {
+  --afj-ivory: #F8F6F2;
+  --afj-charcoal: #1E1E1E;
+  --afj-black: #090909;
+  --afj-gold: #C6A56B;
+  --afj-taupe: #B7AAA1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--afj-ivory);
+  color: var(--afj-charcoal);
+}
+
+.header,
+.Header,
+.site-header {
+  backdrop-filter: blur(18px);
+}
+
+.header-nav-item a,
+.header-menu-nav-item a {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.afj-section {
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 5vw, 5rem);
+  position: relative;
+}
+
+.afj-ivory {
+  background: var(--afj-ivory);
+  color: var(--afj-charcoal);
+}
+
+.afj-dark {
+  background: var(--afj-black);
+  color: var(--afj-ivory);
+}
+
+.afj-charcoal {
+  background: var(--afj-charcoal);
+  color: var(--afj-ivory);
+}
+
+.afj-hero {
+  align-items: center;
+  background-image: var(--hero-image);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  min-height: 96vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.afj-overlay {
+  background:
+    radial-gradient(circle at 70% 55%, rgba(198, 165, 107, 0.16), transparent 26%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.68));
+  inset: 0;
+  position: absolute;
+}
+
+.afj-hero-inner {
+  margin: 0 auto;
+  max-width: 1040px;
+  position: relative;
+  z-index: 1;
+}
+
+.afj-eyebrow {
+  color: var(--afj-gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.afj-section h1,
+.afj-section h2,
+.afj-section h3,
+.afj-footer strong {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.afj-section h1 {
+  color: var(--afj-ivory);
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.98;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.afj-section h2 {
+  font-size: clamp(2.25rem, 5.6vw, 5rem);
+  line-height: 1.04;
+  margin: 0;
+}
+
+.afj-section h3 {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  line-height: 1.14;
+  margin: 0;
+}
+
+.afj-section p,
+.afj-footer p {
+  line-height: 1.75;
+}
+
+.afj-dark p,
+.afj-charcoal p,
+.afj-light p {
+  color: rgba(248, 246, 242, 0.72);
+}
+
+.afj-ivory p {
+  color: rgba(30, 30, 30, 0.68);
+}
+
+.afj-hero-copy {
+  color: rgba(248, 246, 242, 0.82) !important;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin: 1.5rem auto 0;
+  max-width: 760px;
+}
+
+.afj-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.25rem;
+}
+
+.afj-button,
+.sqs-button-element--primary,
+.sqs-button-element--secondary,
+.sqs-block-button-element {
+  border-radius: 0 !important;
+  display: inline-flex;
+  justify-content: center;
+  letter-spacing: 0.13em;
+  min-height: 3.25rem;
+  padding: 0.95rem 1.35rem;
+  text-transform: uppercase;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.afj-button:hover,
+.sqs-button-element--primary:hover,
+.sqs-button-element--secondary:hover,
+.sqs-block-button-element:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  transform: translateY(-2px);
+}
+
+.afj-button-primary {
+  background: var(--afj-ivory);
+  border: 1px solid var(--afj-ivory);
+  color: var(--afj-black);
+}
+
+.afj-button-secondary {
+  border: 1px solid rgba(248, 246, 242, 0.72);
+  color: var(--afj-ivory);
+}
+
+.afj-button-secondary:hover {
+  border-color: var(--afj-gold);
+  color: var(--afj-gold);
+}
+
+.afj-section-heading {
+  margin: 0 auto clamp(2.5rem, 5vw, 4.25rem);
+  max-width: 780px;
+  text-align: center;
+}
+
+.afj-card-grid,
+.afj-image-grid,
+.afj-quote-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.afj-six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.afj-card {
+  border: 1px solid rgba(30, 30, 30, 0.12);
+  min-height: 245px;
+  padding: 1.5rem;
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.afj-card span {
+  background: var(--afj-gold);
+  display: block;
+  height: 1px;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.afj-card:hover {
+  border-color: var(--afj-gold);
+  box-shadow: 0 24px 70px rgba(30, 30, 30, 0.12);
+  transform: translateY(-5px);
+}
+
+.afj-editorial,
+.afj-about,
+.afj-contact {
+  display: grid;
+  gap: clamp(2.25rem, 6vw, 5rem);
+  grid-template-columns: 0.9fr 1.1fr;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.afj-reason-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.afj-reason-grid article {
+  border-top: 1px solid rgba(248, 246, 242, 0.18);
+  padding-top: 1.2rem;
+}
+
+.afj-reason-grid small {
+  color: var(--afj-gold);
+  display: block;
+  letter-spacing: 0.18em;
+  margin-bottom: 1rem;
+}
+
+.afj-image-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.afj-image-card {
+  aspect-ratio: 4 / 5;
+  color: var(--afj-ivory);
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.afj-image-card::after {
+  background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.74));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.afj-image-card img {
+  filter: contrast(1.08) saturate(0.9);
+  height: 100%;
+  object-fit: cover;
+  transition: transform 550ms ease, filter 550ms ease;
+  width: 100%;
+}
+
+.afj-image-card {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(198, 165, 107, 0.14), transparent 32%),
+    #050505;
+}
+
+.afj-image-card img[src$=".png"] {
+  object-fit: contain;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.afj-image-card:hover img {
+  filter: contrast(1.12) saturate(1);
+  transform: scale(1.045);
+}
+
+.afj-image-card span {
+  bottom: 1.2rem;
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  left: 1.2rem;
+  line-height: 1.08;
+  max-width: 80%;
+  position: absolute;
+  z-index: 1;
+}
+
+.afj-portrait {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(198, 165, 107, 0.12), transparent 35%),
+    #050505;
+  border: 1px solid rgba(198, 165, 107, 0.24);
+  margin: 0;
+  overflow: hidden;
+}
+
+.afj-portrait img {
+  aspect-ratio: 4 / 5;
+  filter: contrast(1.05) saturate(0.92);
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.afj-evaluations {
+  background:
+    radial-gradient(circle at 15% 18%, rgba(198, 165, 107, 0.08), transparent 24%),
+    linear-gradient(135deg, #050505, var(--afj-charcoal) 62%, #0b0b0b);
+}
+
+.afj-evaluations .afj-about > div {
+  border-top: 1px solid rgba(198, 165, 107, 0.42);
+  padding-top: clamp(1.4rem, 3vw, 2.25rem);
+}
+
+.afj-evaluations .afj-credentials {
+  border-bottom-color: rgba(198, 165, 107, 0.28);
+  border-top-color: rgba(198, 165, 107, 0.28);
+}
+
+.afj-gem-divider {
+  align-items: center;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.34)),
+    var(--divider-image);
+  background-position: center;
+  background-size: cover;
+  color: var(--afj-ivory);
+  display: grid;
+  min-height: clamp(430px, 58vw, 680px);
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.afj-gem-divider div {
+  max-width: 760px;
+}
+
+.afj-gem-divider h2 {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.35rem, 5.4vw, 5rem);
+  font-weight: 500;
+  line-height: 1.04;
+  margin: 0;
+}
+
+.afj-credentials {
+  border-bottom: 1px solid rgba(30, 30, 30, 0.14);
+  border-top: 1px solid rgba(30, 30, 30, 0.14);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+}
+
+.afj-credentials div {
+  color: var(--afj-gold);
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  line-height: 1.08;
+  padding: 1.1rem;
+  text-align: center;
+}
+
+.afj-quote-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.afj-quote-grid figure {
+  border: 1px solid rgba(248, 246, 242, 0.16);
+  margin: 0;
+  min-height: 300px;
+  padding: 1.6rem;
+}
+
+.afj-quote-grid blockquote {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+  line-height: 1.18;
+  margin: 0;
+}
+
+.afj-quote-grid figcaption {
+  color: var(--afj-gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+.afj-faq {
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+.afj-faq details {
+  border-top: 1px solid rgba(30, 30, 30, 0.14);
+}
+
+.afj-faq details:last-child {
+  border-bottom: 1px solid rgba(30, 30, 30, 0.14);
+}
+
+.afj-faq summary {
+  cursor: pointer;
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.3rem, 3vw, 1.85rem);
+  list-style: none;
+  padding: 1.35rem 2.4rem 1.35rem 0;
+  position: relative;
+}
+
+.afj-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.afj-faq summary::after {
+  color: var(--afj-gold);
+  content: "+";
+  position: absolute;
+  right: 0;
+}
+
+.afj-faq details[open] summary::after {
+  content: "-";
+}
+
+.afj-booking-placeholder {
+  border: 1px solid rgba(248, 246, 242, 0.18);
+  padding: 2rem;
+}
+
+.afj-contact-links {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.afj-contact-links a {
+  color: var(--afj-ivory);
+  font-weight: 700;
+}
+
+.afj-footer {
+  background: var(--afj-black);
+  color: var(--afj-ivory);
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.afj-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.afj-footer a {
+  color: rgba(248, 246, 242, 0.78);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.afj-footer small {
+  color: rgba(248, 246, 242, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+  .afj-six,
+  .afj-image-grid,
+  .afj-quote-grid,
+  .afj-editorial,
+  .afj-about,
+  .afj-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .afj-reason-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .afj-section {
+    padding: 4rem 1.2rem;
+  }
+
+  .afj-hero {
+    min-height: 88vh;
+  }
+
+  .afj-section h1 {
+    font-size: clamp(2.75rem, 14vw, 3.8rem);
+  }
+
+  .afj-section h2 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .afj-button,
+  .afj-button-row,
+  .sqs-block-button-element {
+    width: 100%;
+  }
+
+  .afj-reason-grid,
+  .afj-credentials {
+    grid-template-columns: 1fr;
+  }
+}

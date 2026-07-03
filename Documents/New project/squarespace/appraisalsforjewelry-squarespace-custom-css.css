@@ -1,0 +1,176 @@
+/* Appraisals for Jewelry - optional Squarespace polish layer
+   Paste into Design > Custom CSS after building the page with native sections.
+   Keep section content editable in Squarespace; this only refines global styling. */
+
+:root {
+  --afj-ivory: #F8F6F2;
+  --afj-charcoal: #1E1E1E;
+  --afj-gold: #C6A56B;
+  --afj-taupe: #B7AAA1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--afj-ivory);
+  color: var(--afj-charcoal);
+}
+
+/* Add this class to dark Fluid Engine sections when possible. */
+.afj-dark-section {
+  background: var(--afj-charcoal) !important;
+  color: var(--afj-ivory) !important;
+}
+
+.afj-dark-section p,
+.afj-dark-section li {
+  color: rgba(248, 246, 242, 0.72) !important;
+}
+
+.afj-dark-section h1,
+.afj-dark-section h2,
+.afj-dark-section h3 {
+  color: var(--afj-ivory) !important;
+}
+
+.afj-dark-section .sqs-button-element--secondary,
+.afj-dark-section .sqs-block-button-element {
+  border-color: rgba(248, 246, 242, 0.68) !important;
+  color: var(--afj-ivory) !important;
+}
+
+.afj-dark-section .sqs-button-element--secondary:hover,
+.afj-dark-section .sqs-block-button-element:hover {
+  border-color: var(--afj-gold) !important;
+  color: var(--afj-gold) !important;
+}
+
+h1,
+h2,
+h3,
+.sqs-block-heading {
+  letter-spacing: 0;
+}
+
+p,
+li {
+  line-height: 1.75;
+}
+
+.sqs-button-element--primary,
+.sqs-button-element--secondary,
+.sqs-block-button-element {
+  border-radius: 0 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+.sqs-button-element--primary:hover,
+.sqs-button-element--secondary:hover,
+.sqs-block-button-element:hover {
+  box-shadow: 0 18px 36px rgba(30, 30, 30, 0.14);
+  transform: translateY(-2px);
+}
+
+.header-nav-item a,
+.header-menu-nav-item a {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.header-actions-action--cta .sqs-button-element--primary {
+  padding-left: 1.15rem !important;
+  padding-right: 1.15rem !important;
+}
+
+section[data-section-id] {
+  scroll-margin-top: 88px;
+}
+
+/* Apply this class to card sections/blocks if Squarespace exposes custom classes. */
+.luxury-card,
+.summary-item,
+.user-items-list-item-container {
+  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.luxury-card:hover,
+.summary-item:hover,
+.user-items-list-item-container:hover {
+  border-color: var(--afj-gold) !important;
+  box-shadow: 0 24px 70px rgba(30, 30, 30, 0.12);
+  transform: translateY(-5px);
+}
+
+.afj-dark-section .luxury-card,
+.afj-dark-section .summary-item,
+.afj-dark-section .user-items-list-item-container {
+  background: rgba(248, 246, 242, 0.045) !important;
+  border-color: rgba(248, 246, 242, 0.16) !important;
+}
+
+.afj-dark-section .luxury-card:hover,
+.afj-dark-section .summary-item:hover,
+.afj-dark-section .user-items-list-item-container:hover {
+  border-color: var(--afj-gold) !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+.image-block img,
+.sqs-gallery-design-grid img,
+.user-items-list-item-container img {
+  filter: contrast(1.04) saturate(0.92);
+}
+
+.accordion-item__title,
+.accordion-block summary {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+}
+
+.form-wrapper input,
+.form-wrapper textarea,
+.form-wrapper select {
+  border-radius: 0 !important;
+}
+
+.form-wrapper .field-list .field .field-element:focus {
+  border-color: var(--afj-gold) !important;
+  box-shadow: 0 0 0 3px rgba(198, 165, 107, 0.16);
+}
+
+.socialaccountlinks-v2-block a {
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.socialaccountlinks-v2-block a:hover {
+  color: var(--afj-gold) !important;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: clamp(2.65rem, 13vw, 3.6rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .sqs-block-button-container,
+  .sqs-block-button-element {
+    width: 100%;
+  }
+
+  .sqs-block-button-element {
+    text-align: center;
+  }
+
+  section[data-section-id] {
+    scroll-margin-top: 72px;
+  }
+}
