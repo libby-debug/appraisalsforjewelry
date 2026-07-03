@@ -1,67 +1,95 @@
 import Image from "next/image";
 
-const credentials = ["GIA", "NAJA", "ASA"];
-
 const trustItems = [
-  { title: "Insurance Appraisals", icon: "shield" },
-  { title: "Estate Jewelry", icon: "estate" },
-  { title: "Antique Jewelry", icon: "antique" },
-  { title: "Diamond Appraisals", icon: "diamond" },
-  { title: "Watch Appraisals", icon: "watch" },
-  { title: "Resale Consultations", icon: "market" },
-];
-
-const reasons = [
-  "Independent & Unbiased",
-  "Confidential & Professional",
-  "Certified Expertise",
-  "Detailed Documentation",
-  "Accurate Market Valuations",
-  "Personalized Consultations",
-];
-
-const services = [
   {
     title: "Insurance Appraisals",
-    copy: "Comprehensive replacement value reports for carriers, brokers, and private policy records.",
+    copy: "Replacement value documentation for policies, renewals, and insurer records.",
   },
   {
-    title: "Antique Jewelry Appraisals",
-    copy: "Careful evaluation of period details, provenance indicators, craftsmanship, and condition.",
+    title: "Estate Jewelry",
+    copy: "Discreet valuations for inherited jewelry, estates, executors, and beneficiaries.",
+  },
+  {
+    title: "Antique Jewelry",
+    copy: "Period-sensitive evaluation of condition, craftsmanship, age, and provenance.",
   },
   {
     title: "Diamond Appraisals",
-    copy: "Precise documentation for loose diamonds, engagement rings, and important diamond jewelry.",
+    copy: "Careful review of diamond jewelry, engagement rings, and loose stones.",
   },
   {
-    title: "Estate Jewelry Appraisals",
-    copy: "Discreet support for executors, beneficiaries, collectors, and estate professionals.",
+    title: "Watch Appraisals",
+    copy: "Documentation for modern, vintage, and collectible fine watches.",
   },
   {
-    title: "Divorce / Equitable Distribution",
-    copy: "Clear valuation reports prepared with neutrality, discretion, and careful documentation.",
-  },
-  {
-    title: "Fine Watch Appraisals",
-    copy: "Valuations for modern, vintage, and collectible watches with detailed descriptive records.",
+    title: "Resale Consultations",
+    copy: "Market-informed guidance for private resale, consignment, and collection planning.",
   },
 ];
 
-const testimonials = [
+const reasons = [
   {
-    quote:
-      "The appraisal was thoughtful, precise, and beautifully documented. Every step felt private and professional.",
-    name: "Private Collector",
+    title: "Independent & Unbiased",
+    copy: "Objective valuations prepared without retail sales pressure.",
   },
   {
-    quote:
-      "A calm, expert process for an estate collection that needed both sensitivity and accuracy.",
-    name: "Estate Client",
+    title: "Confidential & Professional",
+    copy: "Private appointments and careful handling of client information.",
   },
   {
-    quote:
-      "The report gave our insurer exactly what was needed while preserving the discretion we wanted.",
-    name: "Insurance Client",
+    title: "Certified Expertise",
+    copy: "Reports prepared by a Graduate Gemologist with GIA training in diamonds and colored gemstones.",
+  },
+  {
+    title: "Accurate Market Valuations",
+    copy: "Values informed by market context, item condition, and comparable demand.",
+  },
+  {
+    title: "Detailed Documentation",
+    copy: "Clear descriptions, photographs, measurements, and valuation notes.",
+  },
+  {
+    title: "Personalized Consultations",
+    copy: "Guidance shaped around insurance, estate, resale, or family needs.",
+  },
+];
+
+const featuredServices = [
+  {
+    title: "Antique Jewelry Appraisals",
+    href: "/antique-jewelry-appraisals",
+    image: "/ruby-antique-jewelry-appraisal.png",
+    alt: "Ruby gemstone for antique jewelry appraisal",
+  },
+  {
+    title: "Diamond Appraisals",
+    href: "/diamond-appraisals",
+    image: "/macro-diamond-certified-jewelry-appraisal.png",
+    alt: "Macro diamond closeup for certified diamond appraisal",
+  },
+  {
+    title: "Estate Jewelry Appraisals",
+    href: "/estate-jewelry-appraisals",
+    image: "/emerald-gemstone-estate-jewelry-appraisal.png",
+    alt: "Emerald gemstone for estate jewelry appraisal",
+  },
+  {
+    title: "Insurance Jewelry Appraisals",
+    href: "/insurance-jewelry-appraisals",
+    image: "/sparkling-diamonds-insurance-appraisal.jpg",
+    alt: "Sparkling diamond closeup for insurance jewelry appraisal",
+  },
+  {
+    title: "Fine Watch Appraisals",
+    href: "/fine-watch-appraisals",
+    image: "/blue-zircon-watch-appraisal.png",
+    alt: "Blue gemstone detail for fine watch appraisal",
+  },
+  {
+    title: "Divorce / Equitable Distribution",
+    href: "/divorce-equitable-distribution",
+    image: "/garnet-equitable-distribution-appraisal.jpg",
+    alt: "Garnet gemstone for equitable distribution appraisal",
   },
 ];
 
@@ -93,66 +121,23 @@ const faqs = [
   },
 ];
 
-function Icon({ name }: { name: string }) {
-  const common = {
-    className: "service-icon",
-    viewBox: "0 0 48 48",
-    "aria-hidden": true,
-  };
-
-  if (name === "diamond") {
-    return (
-      <svg {...common}>
-        <path d="M9 17 16 8h16l7 9-15 23L9 17Z" />
-        <path d="M16 8 24 40 32 8M9 17h30M17 17l7-9 7 9" />
-      </svg>
-    );
-  }
-
-  if (name === "watch") {
-    return (
-      <svg {...common}>
-        <path d="M18 5h12l2 10a16 16 0 0 1 0 18L30 43H18l-2-10a16 16 0 0 1 0-18L18 5Z" />
-        <circle cx="24" cy="24" r="10" />
-        <path d="M24 18v7l5 3" />
-      </svg>
-    );
-  }
-
-  if (name === "shield") {
-    return (
-      <svg {...common}>
-        <path d="M24 5 39 11v12c0 10-6 17-15 20C15 40 9 33 9 23V11l15-6Z" />
-        <path d="m17 24 5 5 10-12" />
-      </svg>
-    );
-  }
-
-  if (name === "estate") {
-    return (
-      <svg {...common}>
-        <path d="M8 41h32M11 37V20l13-10 13 10v17" />
-        <path d="M18 37V25h12v12M16 18h16" />
-      </svg>
-    );
-  }
-
-  if (name === "market") {
-    return (
-      <svg {...common}>
-        <path d="M8 39h32M13 33l7-8 7 5 9-14" />
-        <path d="M31 16h5v5" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg {...common}>
-      <path d="M24 6 33 24l-9 18-9-18L24 6Z" />
-      <path d="M12 13h24M12 35h24M6 24h36" />
-    </svg>
-  );
-}
+const testimonials = [
+  {
+    quote:
+      "The appraisal was thoughtful, precise, and beautifully documented. Every step felt private and professional.",
+    name: "Private Collector",
+  },
+  {
+    quote:
+      "A calm, expert process for an estate collection that needed both sensitivity and accuracy.",
+    name: "Estate Client",
+  },
+  {
+    quote:
+      "The report gave our insurer exactly what was needed while preserving the discretion we wanted.",
+    name: "Insurance Client",
+  },
+];
 
 export default function Home() {
   return (
@@ -165,8 +150,13 @@ export default function Home() {
             "@type": "ProfessionalService",
             name: "Appraisals for Jewelry",
             url: "https://appraisalsforjewelry.com",
+            founder: {
+              "@type": "Person",
+              name: "John Codianni",
+              jobTitle: "Owner and Certified Diamond and Gemstone Appraiser",
+            },
             description:
-              "Professional independent jewelry appraisals for diamonds, estate jewelry, antique pieces, insurance valuations, and fine collections.",
+              "Professional independent jewelry appraisals by John Codianni, Graduate Gemologist and certified diamond and gemstone appraiser, for diamonds, estate jewelry, antique pieces, insurance valuations, and fine collections.",
             areaServed: "United States",
             serviceType: [
               "jewelry appraisal",
@@ -197,18 +187,18 @@ export default function Home() {
       </header>
 
       <main id="home">
-        <section className="hero section-band" aria-labelledby="hero-title">
+        <section className="hero" aria-labelledby="hero-title">
           <Image
             className="hero-image"
-            src="/luxury-jewelry-hero.png"
-            alt="Diamond jewelry and gold ring on a refined ivory and charcoal backdrop"
+            src="/hero-black-sapphire-jewelry-appraisal.png"
+            alt="Black sapphire gemstone macro for certified jewelry appraisal"
             fill
             priority
             sizes="100vw"
           />
           <div className="hero-overlay" />
           <div className="hero-content reveal">
-            <p className="eyebrow">Independent certified jewelry appraiser</p>
+            <p className="eyebrow">John Codianni · Graduate Gemologist</p>
             <h1 id="hero-title">
               Certified Jewelry Appraisals with Precision &amp; Discretion
             </h1>
@@ -225,121 +215,142 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-note" aria-label="Service highlights">
-            <span>Diamonds</span>
-            <span>Estate</span>
-            <span>Antique</span>
-            <span>Insurance</span>
-          </div>
         </section>
 
-        <section className="section trust-section" aria-labelledby="trust-title">
+        <section className="section trust-section" id="services" aria-labelledby="trust-title">
           <div className="section-heading reveal">
-            <p className="eyebrow">Trusted valuation services</p>
+            <p className="eyebrow">Trusted Valuation Services</p>
             <h2 id="trust-title">Jewelry Appraisal Expertise</h2>
             <p>
-              Formal reports, careful examination, and private consultations for
-              important pieces and full collections.
+              Formal reports, careful examination, and private consultations led
+              by John Codianni, Owner and Certified Diamond and Gemstone
+              Appraiser.
             </p>
           </div>
 
-          <div className="trust-grid reveal">
+          <div className="card-grid six-grid reveal">
             {trustItems.map((item) => (
-              <article className="icon-card" key={item.title}>
-                <Icon name={item.icon} />
+              <article className="text-card" key={item.title}>
+                <span />
                 <h3>{item.title}</h3>
+                <p>{item.copy}</p>
               </article>
-            ))}
-          </div>
-
-          <div className="credential-strip reveal" aria-label="Certification placeholders">
-            {credentials.map((credential) => (
-              <div className="credential" key={credential}>
-                <span>{credential}</span>
-                <small>Certification placeholder</small>
-              </div>
             ))}
           </div>
         </section>
 
-        <section className="section editorial-section" aria-labelledby="why-title">
+        <section className="section editorial-section dark-section" aria-labelledby="why-title">
           <div className="editorial-intro reveal">
-            <p className="eyebrow">Why choose us</p>
+            <p className="eyebrow">Why Choose Us</p>
             <h2 id="why-title">
               A refined appraisal process for valuables that require care.
             </h2>
           </div>
           <div className="reason-grid reveal">
             {reasons.map((reason, index) => (
-              <article className="reason" key={reason}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{reason}</h3>
+              <article className="reason" key={reason.title}>
+                <small>{String(index + 1).padStart(2, "0")}</small>
+                <h3>{reason.title}</h3>
+                <p>{reason.copy}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section services-section" id="services" aria-labelledby="services-title">
-          <div className="section-heading reveal">
-            <p className="eyebrow">Featured services</p>
-            <h2 id="services-title">Certified Appraisal Reports</h2>
+        <section className="section featured-section" aria-labelledby="featured-title">
+          <div className="section-heading light-heading reveal">
+            <p className="eyebrow">Featured Services</p>
+            <h2 id="featured-title">Specialized Appraisal Reports</h2>
             <p>
-              Appraisal services tailored to insurance coverage, estates,
-              private sales, equitable distribution, and collection planning.
+              Luxury appraisal services tailored to important jewelry,
+              gemstones, watches, estate matters, insurance, and private
+              collection decisions.
             </p>
           </div>
-          <div className="services-grid reveal">
-            {services.map((service) => (
-              <article className="service-card" key={service.title}>
-                <div className="service-card-line" />
-                <h3>{service.title}</h3>
-                <p>{service.copy}</p>
-                <a href="#contact" aria-label={`Request ${service.title}`}>
-                  Request service
-                </a>
-              </article>
+
+          <div className="image-grid reveal">
+            {featuredServices.map((service) => (
+              <a className="image-card" href={service.href} key={service.title}>
+                <Image
+                  src={service.image}
+                  alt={service.alt}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 33vw"
+                />
+                <span>{service.title}</span>
+              </a>
             ))}
           </div>
         </section>
 
-        <section className="section about-section" id="about" aria-labelledby="about-title">
-          <div className="portrait-panel reveal">
+        <section
+          className="gem-divider"
+          aria-label="Private market guidance"
+        >
+          <Image
+            src="/luxury-gemstones-resale-consultation.jpeg"
+            alt="Luxury gemstone macro photography for resale consultation"
+            fill
+            sizes="100vw"
+          />
+          <div className="gem-divider-overlay" />
+          <div className="gem-divider-content reveal">
+            <p className="eyebrow">Private Market Guidance</p>
+            <h2>
+              Valuations for fine collections, rare gemstones, and important
+              jewelry.
+            </h2>
+          </div>
+        </section>
+
+        <section
+          className="section about-section dark-section"
+          id="about"
+          aria-labelledby="about-title"
+        >
+          <figure className="portrait-panel reveal">
             <Image
-              src="/appraiser-portrait.png"
-              alt="Elegant portrait placeholder for a certified jewelry appraiser"
-              width={900}
-              height={1100}
+              src="/pearl-fine-jewelry-appraisal.png"
+              alt="Pearl closeup for fine jewelry appraisal consultation"
+              width={2400}
+              height={2400}
               sizes="(max-width: 900px) 100vw, 42vw"
             />
-          </div>
+          </figure>
           <div className="about-copy reveal">
-            <p className="eyebrow">Private client advisory</p>
-            <h2 id="about-title">Professional judgment, quietly delivered.</h2>
-            <p>
-              Providing trusted jewelry valuations with professionalism,
-              discretion, and expertise for collectors, estates, insurers, and
-              private clients.
+            <p className="eyebrow">
+              John Codianni · Owner and Certified Diamond and Gemstone Appraiser
             </p>
-            <div className="stat-row" aria-label="Experience and credentials">
-              <div>
-                <strong>15+</strong>
-                <span>Years experience</span>
-              </div>
-              <div>
-                <strong>3</strong>
-                <span>Credential areas</span>
-              </div>
-              <div>
-                <strong>100%</strong>
-                <span>Independent</span>
-              </div>
+            <h2 id="about-title">Discreet and Honest Evaluations</h2>
+            <p>
+              Every jewelry appraisal is handled with professionalism,
+              discretion, and integrity. Clients receive honest, unbiased
+              evaluations supported by industry expertise and careful market
+              analysis.
+            </p>
+            <p>
+              Whether assessing diamonds, estate jewelry, antique pieces, or
+              fine gemstone collections, each consultation is conducted with
+              complete confidentiality and attention to detail.
+            </p>
+            <p>
+              John Codianni is a Graduate Gemologist and certified diamond and
+              gemstone appraiser with GIA training in diamonds and colored
+              gemstones. His goal is to provide clear, accurate valuations
+              clients can trust for insurance, estate planning, resale
+              decisions, and personal knowledge.
+            </p>
+            <div className="credential-strip" aria-label="Credentials">
+              <div>Graduate Gemologist</div>
+              <div>GIA Trained</div>
+              <div>Diamonds &amp; Colored Gemstones</div>
             </div>
           </div>
         </section>
 
         <section className="section testimonials-section" aria-labelledby="testimonials-title">
-          <div className="section-heading reveal">
-            <p className="eyebrow">Client notes</p>
+          <div className="section-heading light-heading reveal">
+            <p className="eyebrow">Client Notes</p>
             <h2 id="testimonials-title">Discreet, detailed, trusted.</h2>
           </div>
           <div className="testimonial-track reveal" aria-label="Client testimonials">
@@ -354,7 +365,7 @@ export default function Home() {
 
         <section className="section faq-section" id="faq" aria-labelledby="faq-title">
           <div className="section-heading reveal">
-            <p className="eyebrow">Common questions</p>
+            <p className="eyebrow">Common Questions</p>
             <h2 id="faq-title">Appraisal FAQ</h2>
           </div>
           <div className="faq-list reveal">
@@ -367,31 +378,25 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section contact-section" id="contact" aria-labelledby="contact-title">
+        <section
+          className="section contact-section dark-section"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
           <div className="contact-copy reveal">
-            <p className="eyebrow">Book a private consultation</p>
+            <p className="eyebrow">Book a Private Consultation</p>
             <h2 id="contact-title">Schedule a jewelry appraisal.</h2>
             <p>
-              Share a few details about the item or collection. A private
-              appointment can be arranged for diamond appraisal, antique jewelry
-              appraisal, estate jewelry appraisal, or insurance jewelry appraisal
-              services.
+              Share a few details about the item or collection. John Codianni
+              provides private consultations for diamond appraisal, antique
+              jewelry appraisal, estate jewelry appraisal, and insurance jewelry
+              appraisal services.
             </p>
             <div className="contact-details">
               <a href="tel:+15550193000">(555) 019-3000</a>
               <a href="mailto:appointments@appraisalsforjewelry.com">
                 appointments@appraisalsforjewelry.com
               </a>
-            </div>
-            <div className="map-placeholder">
-              <Image
-                src="/contact-map.png"
-                alt="Map placeholder for private appointment location"
-                width={1200}
-                height={800}
-                sizes="(max-width: 900px) 100vw, 40vw"
-              />
-              <span>Private appointment location</span>
             </div>
           </div>
 
@@ -414,9 +419,10 @@ export default function Home() {
                 <option value="" disabled>
                   Select a service
                 </option>
-                {services.map((service) => (
+                {featuredServices.map((service) => (
                   <option key={service.title}>{service.title}</option>
                 ))}
+                <option>Resale Consultation</option>
               </select>
             </label>
             <label>
@@ -428,7 +434,7 @@ export default function Home() {
               />
             </label>
             <button className="button button-primary" type="submit">
-              Request a Private Appointment
+              Book a Consultation
             </button>
           </form>
         </section>
@@ -440,8 +446,9 @@ export default function Home() {
             appraisalsforjewelry.com
           </a>
           <p>
-            Certified jewelry appraiser services for diamonds, estate pieces,
-            antique jewelry, watches, and insurance valuations.
+            John Codianni, Owner and Certified Diamond and Gemstone Appraiser,
+            provides independent appraisals for diamonds, estate pieces, antique
+            jewelry, watches, and insurance valuations.
           </p>
         </div>
         <nav aria-label="Footer navigation">
@@ -455,17 +462,6 @@ export default function Home() {
             antiquejewelryappraisals.com
           </a>
           <a href="https://appraisemydiamonds.com">appraisemydiamonds.com</a>
-        </div>
-        <div className="socials" aria-label="Social links">
-          <a href="#" aria-label="Instagram">
-            IG
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            in
-          </a>
-          <a href="#" aria-label="Pinterest">
-            P
-          </a>
         </div>
         <small>
           &copy; 2026 Appraisals for Jewelry. All rights reserved.

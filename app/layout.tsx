@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { AuthProvider } from "@/components/auth-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Certified Jewelry Appraisals | Diamonds, Estate & Antique Jewelry",
   description:
-    "Professional independent jewelry appraisals for diamonds, estate jewelry, antique pieces, insurance valuations, and fine collections.",
+    "Professional independent jewelry appraisals by John Codianni, Graduate Gemologist and certified diamond and gemstone appraiser, for diamonds, estate jewelry, antique pieces, insurance valuations, and fine collections.",
   keywords: [
     "jewelry appraisal",
     "certified jewelry appraiser",
@@ -13,12 +12,14 @@ export const metadata: Metadata = {
     "antique jewelry appraisal",
     "estate jewelry appraisal",
     "insurance jewelry appraisal",
+    "Graduate Gemologist",
+    "GIA trained diamonds colored gemstones",
   ],
   metadataBase: new URL("https://appraisalsforjewelry.com"),
   openGraph: {
     title: "Certified Jewelry Appraisals | Diamonds, Estate & Antique Jewelry",
     description:
-      "Professional independent jewelry appraisals for diamonds, estate jewelry, antique pieces, insurance valuations, and fine collections.",
+      "Professional independent jewelry appraisals by John Codianni, Graduate Gemologist and certified diamond and gemstone appraiser, for diamonds, estate jewelry, antique pieces, insurance valuations, and fine collections.",
     url: "https://appraisalsforjewelry.com",
     siteName: "Appraisals for Jewelry",
     type: "website",
@@ -32,9 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <AuthProvider>{children}</AuthProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
