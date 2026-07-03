@@ -31,26 +31,32 @@ const reasons = [
   {
     title: "Independent & Unbiased",
     copy: "Objective valuations prepared without retail sales pressure.",
+    gem: "diamond",
   },
   {
     title: "Confidential & Professional",
     copy: "Private appointments and careful handling of client information.",
+    gem: "ruby",
   },
   {
     title: "Certified Expertise",
     copy: "Reports prepared by a Graduate Gemologist with GIA training in diamonds and colored gemstones.",
+    gem: "emerald",
   },
   {
     title: "Accurate Market Valuations",
     copy: "Values informed by market context, item condition, and comparable demand.",
+    gem: "sapphire",
   },
   {
     title: "Detailed Documentation",
     copy: "Clear descriptions, photographs, measurements, and valuation notes.",
+    gem: "amethyst",
   },
   {
     title: "Personalized Consultations",
     copy: "Guidance shaped around insurance, estate, resale, or family needs.",
+    gem: "topaz",
   },
 ];
 
@@ -247,9 +253,12 @@ export default function Home() {
             </h2>
           </div>
           <div className="reason-grid reveal">
-            {reasons.map((reason, index) => (
+            {reasons.map((reason) => (
               <article className="reason" key={reason.title}>
-                <small>{String(index + 1).padStart(2, "0")}</small>
+                <span
+                  className={`gem-bullet gem-${reason.gem}`}
+                  aria-hidden="true"
+                />
                 <h3>{reason.title}</h3>
                 <p>{reason.copy}</p>
               </article>
@@ -318,10 +327,11 @@ export default function Home() {
             />
           </figure>
           <div className="about-copy reveal">
-            <p className="eyebrow">
-              John Codianni · Owner and Certified Diamond and Gemstone Appraiser
+            <p className="eyebrow">Discreet and Honest Evaluations</p>
+            <h2 id="about-title">John Codianni</h2>
+            <p className="credential-title">
+              Owner and Certified Diamond and Gemstone Appraiser
             </p>
-            <h2 id="about-title">Discreet and Honest Evaluations</h2>
             <p>
               Every jewelry appraisal is handled with professionalism,
               discretion, and integrity. Clients receive honest, unbiased
@@ -334,16 +344,14 @@ export default function Home() {
               complete confidentiality and attention to detail.
             </p>
             <p>
-              John Codianni is a Graduate Gemologist and certified diamond and
-              gemstone appraiser with GIA training in diamonds and colored
-              gemstones. His goal is to provide clear, accurate valuations
-              clients can trust for insurance, estate planning, resale
-              decisions, and personal knowledge.
+              Our goal is to provide clear, accurate valuations clients can
+              trust for insurance, estate planning, resale decisions, and
+              personal knowledge.
             </p>
             <div className="credential-strip" aria-label="Credentials">
+              <div>John Codianni</div>
               <div>Graduate Gemologist</div>
-              <div>GIA Trained</div>
-              <div>Diamonds &amp; Colored Gemstones</div>
+              <div>GIA trained in diamonds and colored gemstones</div>
             </div>
           </div>
         </section>

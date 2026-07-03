@@ -361,15 +361,55 @@ p {
 .reason {
   border-top: 1px solid var(--dark-line);
   min-height: 190px;
-  padding-top: 1.2rem;
+  padding: 1.2rem 0 0 3.5rem;
+  position: relative;
 }
 
-.reason small {
+.gem-bullet {
+  border: 1px solid rgba(248, 246, 242, 0.34);
+  box-shadow:
+    0 0 0 7px rgba(248, 246, 242, 0.035),
+    0 0 24px currentColor;
   color: var(--gold);
   display: block;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  margin-bottom: 1rem;
+  height: 1.15rem;
+  left: 0.2rem;
+  position: absolute;
+  top: 1.35rem;
+  transform: rotate(45deg);
+  width: 1.15rem;
+}
+
+.gem-bullet::after {
+  background: currentColor;
+  content: "";
+  inset: 0.26rem;
+  opacity: 0.92;
+  position: absolute;
+}
+
+.gem-diamond {
+  color: #f4f7fb;
+}
+
+.gem-ruby {
+  color: #c4313f;
+}
+
+.gem-emerald {
+  color: #16a36b;
+}
+
+.gem-sapphire {
+  color: #2f6edc;
+}
+
+.gem-amethyst {
+  color: #8d5bd3;
+}
+
+.gem-topaz {
+  color: #dca83d;
 }
 
 .image-grid {
@@ -476,6 +516,15 @@ p {
 .about-copy {
   border-top: 1px solid rgba(198, 165, 107, 0.42);
   padding-top: clamp(1.4rem, 3vw, 2.25rem);
+}
+
+.credential-title {
+  color: var(--gold);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin: 1rem 0 1.75rem;
+  text-transform: uppercase;
 }
 
 .credential-strip {
