@@ -4,8 +4,8 @@ const trustItems = [
   {
     title: "Insurance Appraisals",
     copy: "Replacement value documentation for policies, renewals, and insurer records.",
-    image: "/sparkling-diamonds-insurance-appraisal.jpg",
-    alt: "Sparkling diamonds for insurance jewelry appraisal",
+    image: "/insurance-engagement-ring-box.png",
+    alt: "Princess-cut diamond engagement ring in a red velvet ring box for insurance appraisal",
   },
   {
     title: "Estate Jewelry",
