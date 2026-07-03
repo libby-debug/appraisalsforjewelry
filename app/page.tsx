@@ -28,8 +28,8 @@ const trustItems = [
   {
     title: "Watch Appraisals",
     copy: "Documentation for modern, vintage, and collectible fine watches.",
-    image: "/blue-zircon-watch-appraisal.png",
-    alt: "Blue gemstone detail for fine watch appraisal",
+    image: "/images/watch-appraisals.png",
+    alt: "Gold Rolex Day-Date watch on a black background for watch appraisals",
   },
   {
     title: "Resale Consultations",
