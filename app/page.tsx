@@ -34,8 +34,8 @@ const trustItems = [
   {
     title: "Resale Consultations",
     copy: "Market-informed guidance for private resale, consignment, and collection planning.",
-    image: "/luxury-gemstones-resale-consultation.jpeg",
-    alt: "Luxury gemstones for resale consultation",
+    image: "/images/resale-consultations.png",
+    alt: "Diamond and ruby bracelet on black background",
   },
 ];
 
