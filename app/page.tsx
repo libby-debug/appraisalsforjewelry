@@ -4,26 +4,38 @@ const trustItems = [
   {
     title: "Insurance Appraisals",
     copy: "Replacement value documentation for policies, renewals, and insurer records.",
+    image: "/sparkling-diamonds-insurance-appraisal.jpg",
+    alt: "Sparkling diamonds for insurance jewelry appraisal",
   },
   {
     title: "Estate Jewelry",
     copy: "Discreet valuations for inherited jewelry, estates, executors, and beneficiaries.",
+    image: "/tanzanite-estate-gemstone-appraisal.png",
+    alt: "Tanzanite gemstone for estate jewelry appraisal",
   },
   {
     title: "Antique Jewelry",
     copy: "Period-sensitive evaluation of condition, craftsmanship, age, and provenance.",
+    image: "/ruby-antique-jewelry-appraisal.png",
+    alt: "Ruby gemstone for antique jewelry appraisal",
   },
   {
     title: "Diamond Appraisals",
     copy: "Careful review of diamond jewelry, engagement rings, and loose stones.",
+    image: "/macro-diamond-certified-jewelry-appraisal.png",
+    alt: "Macro diamond for certified diamond appraisal",
   },
   {
     title: "Watch Appraisals",
     copy: "Documentation for modern, vintage, and collectible fine watches.",
+    image: "/blue-zircon-watch-appraisal.png",
+    alt: "Blue gemstone detail for fine watch appraisal",
   },
   {
     title: "Resale Consultations",
     copy: "Market-informed guidance for private resale, consignment, and collection planning.",
+    image: "/luxury-gemstones-resale-consultation.jpeg",
+    alt: "Luxury gemstones for resale consultation",
   },
 ];
 
@@ -97,6 +109,13 @@ const featuredServices = [
     image: "/garnet-equitable-distribution-appraisal.jpg",
     alt: "Garnet gemstone for equitable distribution appraisal",
   },
+];
+
+const processItems = [
+  "Private intake and item review",
+  "Gemological examination and documentation",
+  "Market analysis and valuation research",
+  "Clear appraisal report delivery",
 ];
 
 const faqs = [
@@ -204,7 +223,7 @@ export default function Home() {
           />
           <div className="hero-overlay" />
           <div className="hero-content reveal">
-            <p className="eyebrow">John Codianni · Graduate Gemologist</p>
+            <p className="eyebrow">John Codianni / Graduate Gemologist</p>
             <h1 id="hero-title">
               Certified Jewelry Appraisals with Precision &amp; Discretion
             </h1>
@@ -221,12 +240,19 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <div className="hero-proof reveal" aria-label="Professional credentials">
+            <span>Certified Diamond and Gemstone Appraiser</span>
+            <span>GIA trained in diamonds and colored gemstones</span>
+            <span>Insurance / Estate / Antique / Diamond</span>
+          </div>
         </section>
 
         <section className="section trust-section" id="services" aria-labelledby="trust-title">
-          <div className="section-heading reveal">
-            <p className="eyebrow">Trusted Valuation Services</p>
-            <h2 id="trust-title">Jewelry Appraisal Expertise</h2>
+          <div className="split-heading reveal">
+            <div>
+              <p className="eyebrow">Trusted Valuation Services</p>
+              <h2 id="trust-title">Private appraisal expertise for meaningful jewelry.</h2>
+            </div>
             <p>
               Formal reports, careful examination, and private consultations led
               by John Codianni, Owner and Certified Diamond and Gemstone
@@ -234,12 +260,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="card-grid six-grid reveal">
+          <div className="service-grid reveal">
             {trustItems.map((item) => (
-              <article className="text-card" key={item.title}>
-                <span />
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
+              <article className="service-card" key={item.title}>
+                <div className="service-image">
+                  <Image src={item.image} alt={item.alt} fill sizes="(max-width: 900px) 100vw, 33vw" />
+                </div>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.copy}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -251,6 +281,19 @@ export default function Home() {
             <h2 id="why-title">
               A refined appraisal process for valuables that require care.
             </h2>
+            <p>
+              Each valuation is handled with the calm privacy of a boutique
+              consultancy and the rigor expected for important diamonds,
+              estate jewelry, antique pieces, and fine collections.
+            </p>
+            <div className="editorial-image">
+              <Image
+                src="/loose-gemstones-appraisal.png"
+                alt="Loose gemstones on a dark background for jewelry appraisal"
+                fill
+                sizes="(max-width: 1020px) 100vw, 38vw"
+              />
+            </div>
           </div>
           <div className="reason-grid reveal">
             {reasons.map((reason) => (
@@ -271,9 +314,10 @@ export default function Home() {
             <p className="eyebrow">Featured Services</p>
             <h2 id="featured-title">Specialized Appraisal Reports</h2>
             <p>
-              Luxury appraisal services tailored to important jewelry,
-              gemstones, watches, estate matters, insurance, and private
-              collection decisions.
+              Image-led service pathways for jewelry appraisal, certified
+              jewelry appraiser expertise, diamond appraisal, antique jewelry
+              appraisal, estate jewelry appraisal, and insurance jewelry
+              appraisal needs.
             </p>
           </div>
 
@@ -292,10 +336,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="gem-divider"
-          aria-label="Private market guidance"
-        >
+        <section className="gem-divider" aria-label="Private market guidance">
           <Image
             src="/luxury-gemstones-resale-consultation.jpeg"
             alt="Luxury gemstone macro photography for resale consultation"
@@ -309,6 +350,10 @@ export default function Home() {
               Valuations for fine collections, rare gemstones, and important
               jewelry.
             </h2>
+            <p>
+              Clear market context for insurance, estate planning, resale
+              decisions, equitable distribution, and personal knowledge.
+            </p>
           </div>
         </section>
 
@@ -325,6 +370,7 @@ export default function Home() {
               height={2400}
               sizes="(max-width: 900px) 100vw, 42vw"
             />
+            <figcaption>Confidential consultations for private clients, estates, insurers, and collectors.</figcaption>
           </figure>
           <div className="about-copy reveal">
             <p className="eyebrow">Discreet and Honest Evaluations</p>
@@ -356,6 +402,25 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="process-band" aria-labelledby="process-title">
+          <Image
+            src="/macro-diamond-certified-jewelry-appraisal.png"
+            alt="Macro diamond detail for appraisal process"
+            fill
+            sizes="100vw"
+          />
+          <div className="process-overlay" />
+          <div className="process-content reveal">
+            <p className="eyebrow">The Appraisal Experience</p>
+            <h2 id="process-title">Measured, private, and carefully documented.</h2>
+            <ol>
+              {processItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         <section className="section testimonials-section" aria-labelledby="testimonials-title">
           <div className="section-heading light-heading reveal">
             <p className="eyebrow">Client Notes</p>
@@ -372,17 +437,29 @@ export default function Home() {
         </section>
 
         <section className="section faq-section" id="faq" aria-labelledby="faq-title">
-          <div className="section-heading reveal">
-            <p className="eyebrow">Common Questions</p>
-            <h2 id="faq-title">Appraisal FAQ</h2>
-          </div>
-          <div className="faq-list reveal">
-            {faqs.map((faq) => (
-              <details key={faq.question}>
-                <summary>{faq.question}</summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
+          <div className="faq-layout">
+            <div className="faq-art reveal" aria-hidden="true">
+              <Image
+                src="/emerald-gemstone-estate-jewelry-appraisal.png"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 38vw"
+              />
+            </div>
+            <div className="reveal">
+              <div className="section-heading align-left">
+                <p className="eyebrow">Common Questions</p>
+                <h2 id="faq-title">Appraisal FAQ</h2>
+              </div>
+              <div className="faq-list">
+                {faqs.map((faq) => (
+                  <details key={faq.question}>
+                    <summary>{faq.question}</summary>
+                    <p>{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -400,6 +477,15 @@ export default function Home() {
               jewelry appraisal, estate jewelry appraisal, and insurance jewelry
               appraisal services.
             </p>
+            <div className="map-card" aria-label="Private appointment location placeholder">
+              <Image
+                src="/loose-gemstones-appraisal.png"
+                alt="Loose gemstones used as a luxury map placeholder"
+                fill
+                sizes="(max-width: 900px) 100vw, 38vw"
+              />
+              <span>Private appointments by request</span>
+            </div>
             <div className="contact-details">
               <a href="tel:+15550193000">(555) 019-3000</a>
               <a href="mailto:appointments@appraisalsforjewelry.com">
@@ -471,9 +557,7 @@ export default function Home() {
           </a>
           <a href="https://appraisemydiamonds.com">appraisemydiamonds.com</a>
         </div>
-        <small>
-          &copy; 2026 Appraisals for Jewelry. All rights reserved.
-        </small>
+        <small>&copy; 2026 Appraisals for Jewelry. All rights reserved.</small>
       </footer>
     </>
   );
