@@ -527,7 +527,6 @@ p {
     transform 550ms ease;
 }
 
-.image-card:nth-child(1) img,
 .image-card:nth-child(2) img,
 .image-card:nth-child(3) img,
 .image-card:nth-child(5) img {

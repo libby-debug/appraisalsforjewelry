@@ -16,8 +16,8 @@ const trustItems = [
   {
     title: "Antique Jewelry",
     copy: "Period-sensitive evaluation of condition, craftsmanship, age, and provenance.",
-    image: "/ruby-antique-jewelry-appraisal.png",
-    alt: "Ruby gemstone for antique jewelry appraisal",
+    image: "/antique-jewelry-sapphire-filigree-ring.png",
+    alt: "Elegant woman's hand wearing a gold filigree sapphire ring for antique jewelry appraisal",
   },
   {
     title: "Diamond Appraisals",
@@ -74,10 +74,10 @@ const reasons = [
 
 const featuredServices = [
   {
-    title: "Antique Jewelry Appraisals",
+    title: "Antique Jewelry",
     href: "/antique-jewelry-appraisals",
-    image: "/ruby-antique-jewelry-appraisal.png",
-    alt: "Ruby gemstone for antique jewelry appraisal",
+    image: "/antique-jewelry-sapphire-filigree-ring.png",
+    alt: "Elegant woman's hand wearing a gold filigree sapphire ring for antique jewelry appraisal",
   },
   {
     title: "Diamond Appraisals",
